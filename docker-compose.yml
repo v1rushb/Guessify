@@ -1,0 +1,39 @@
+version: '3.8'
+
+#...
+services:
+  postgres:
+    image: postgres:16
+    container_name: guessify_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "3015:5432"
+    networks:
+      - guessify_network
+  app:
+    image: omarjabari007/guessify_app:latest
+    container_name: guessify_app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://guessify_postgres:5432/guessify_db
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SERVER_PORT: "8084"
+    ports:
+      - "8084:8084"
+    depends_on:
+      - postgres
+    networks:
+      - guessify_network
+
+networks:
+  guessify_network:
+    driver: bridge
+
+volumes:
+  postgres_data:

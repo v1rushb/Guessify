@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Guessify</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+</head>
+<body>
+<div id="container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+        <label for="signup-name">Name :</label>
+        <input type="text" id="signup-name" name="name" required><br>
+
+        <label for="signup-password">Password :</label>
+        <input type="password" id="signup-password" name="password" required><br>
+
+        <label for="signup-bio">Bio (optional):</label>
+        <textarea id="signup-bio" name="bio"></textarea><br>
+
+        <label for="signup-age">Age (optional):</label>
+        <input type="number" id="signup-age" name="age"><br>
+
+        <button type="button" onclick="signUp()">Sign Up</button>
+    </form>
+    <a type="button" onclick="redirectToSignIn()">Back to sign in</a>
+    <div id="error-message" style="color: red; display: none;"></div>
+</div>
+<script src="../static/js/register.js"></script>
+</body>
+</html>
