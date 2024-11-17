@@ -20,7 +20,7 @@ services:
     image: omarjabari007/guessify_app:latest
     container_name: guessify_app
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://guessify_postgres:5432/guessify_db
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
       SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
       SERVER_PORT: "8084"
