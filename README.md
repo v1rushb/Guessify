@@ -52,20 +52,36 @@ Run the backend server:
 
 ```bash
 mvn spring-boot:run
-Access the game:
-Open the browser and navigate to the provided local or deployed URL.
 ```
+
+## Access the game:
+
+Open the browser and navigate to the provided local or deployed URL.
 
 **Game Workflow**
 
 Here’s an overview of the game from start to finish:
 
-1. Signup & Signin Page
+### 1. Signup & Signin Page
 
-2. Home Page
+- **Signup**  
+  ![Signup Page](images/signup.PNG)
 
-3. Waiting Room
+- **Signin**  
+  ![Signin Page](images/login.PNG)
 
-4. Inside the Game
+### 2. Home Page
 
-5. Declare the Winner
+![Home Page](images/home.PNG)
+
+### 3. Waiting Room
+
+![Waiting Room](images/waiting_Room.PNG)
+
+### 4. Inside the Game
+
+![Inside the Game](images/inside_the_game.PNG)
+
+### 5. Declare the Winner
+
+![Declare the Winner](images/declare_winner.PNG)
