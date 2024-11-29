@@ -39,7 +39,7 @@ This internship focused solely on backend development, not frontend. We used bas
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Omarjabari007/Guessify.git
+   git clone https://github.com/v1rushb/Guessify.git
    cd Guessify
 
    ```
